@@ -22,6 +22,7 @@ struct GradientBackgroundStyle: ButtonStyle {
             .cornerRadius(40)
             .padding(.horizontal)
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+            .rotationEffect(configuration.isPressed ? Angle(degrees: 180) : Angle(degrees: 0))
     }
 }
 
