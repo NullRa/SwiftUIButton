@@ -18,6 +18,7 @@ struct ContentView: View {
                 .fontWeight(.semibold)
                 .font(.title)
         }
+        .frame(minWidth: 0, maxWidth: .infinity)
         .foregroundColor(.white)
         .padding()
         .background(
@@ -27,6 +28,7 @@ struct ContentView: View {
                 startPoint: .leading,
                 endPoint: .trailing))
         .cornerRadius(40)
+        .padding(.horizontal)
     }
 }
 
