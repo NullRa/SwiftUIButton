@@ -21,6 +21,7 @@ struct GradientBackgroundStyle: ButtonStyle {
                     endPoint: .trailing))
             .cornerRadius(40)
             .padding(.horizontal)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
     }
 }
 
