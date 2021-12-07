@@ -10,20 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Button {
-            print("Hello World!")
+            print("Delete button tapped!")
         } label: {
-            Text("Hello World")
-                .padding()
-                .background(.purple)
-                .cornerRadius(40)
-                .foregroundColor(.white)
+            Image(systemName: "trash")
                 .font(.title)
-                .padding()
-                .overlay {
-                    RoundedRectangle(cornerRadius: 40)
-                        .stroke(.purple,lineWidth: 5)
-                }
+            Text("Delete")
+                .fontWeight(.semibold)
+                .font(.title)
         }
+        .foregroundColor(.white)
+        .padding()
+        .background(.red)
+        .cornerRadius(40)
     }
 }
 
