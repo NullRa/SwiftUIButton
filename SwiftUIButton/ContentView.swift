@@ -13,10 +13,10 @@ struct ContentView: View {
             print("Hello World!")
         } label: {
             Text("Hello World")
-                .padding()
-                .background(.purple)
-                .foregroundColor(.white)
+                .foregroundColor(.purple)
                 .font(.title)
+                .padding()
+                .border(.purple,width: 5)
         }
     }
 }
