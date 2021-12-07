@@ -30,11 +30,13 @@ struct ContentView: View {
             Button {
                 print("Share button tapped!")
             } label: {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.title)
-                Text("Share")
-                    .fontWeight(.semibold)
-                    .font(.title)
+                HStack {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title)
+                    Text("Share")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
             }
             .buttonStyle(GradientBackgroundStyle())
             
@@ -42,22 +44,26 @@ struct ContentView: View {
             Button {
                 print("Edit button tapped!")
             } label: {
-                Image(systemName: "square.and.pencil")
-                    .font(.title)
-                Text("Edit")
-                    .fontWeight(.semibold)
-                    .font(.title)
+                HStack {
+                    Image(systemName: "square.and.pencil")
+                        .font(.title)
+                    Text("Edit")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
             }
             .buttonStyle(GradientBackgroundStyle())
             
             Button {
                 print("Delete button tapped!")
             } label: {
-                Image(systemName: "trash")
-                    .font(.title)
-                Text("Delete")
-                    .fontWeight(.semibold)
-                    .font(.title)
+                HStack {
+                    Image(systemName: "trash")
+                        .font(.title)
+                    Text("Delete")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
             }
             .buttonStyle(GradientBackgroundStyle())
         }
