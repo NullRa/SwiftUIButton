@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct GradientBackgroundStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding()
+            .background(
+                LinearGradient(
+                    gradient:
+                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+            .cornerRadius(40)
+            .padding(.horizontal)
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -19,17 +36,8 @@ struct ContentView: View {
                     .fontWeight(.semibold)
                     .font(.title)
             }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .foregroundColor(.white)
-            .padding()
-            .background(
-                LinearGradient(
-                    gradient:
-                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
-                    startPoint: .leading,
-                    endPoint: .trailing))
-            .cornerRadius(40)
-            .padding(.horizontal)
+            .buttonStyle(GradientBackgroundStyle())
+            
             
             Button {
                 print("Edit button tapped!")
@@ -40,17 +48,7 @@ struct ContentView: View {
                     .fontWeight(.semibold)
                     .font(.title)
             }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .foregroundColor(.white)
-            .padding()
-            .background(
-                LinearGradient(
-                    gradient:
-                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
-                    startPoint: .leading,
-                    endPoint: .trailing))
-            .cornerRadius(40)
-            .padding(.horizontal)
+            .buttonStyle(GradientBackgroundStyle())
             
             Button {
                 print("Delete button tapped!")
@@ -61,17 +59,7 @@ struct ContentView: View {
                     .fontWeight(.semibold)
                     .font(.title)
             }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .foregroundColor(.white)
-            .padding()
-            .background(
-                LinearGradient(
-                    gradient:
-                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
-                    startPoint: .leading,
-                    endPoint: .trailing))
-            .cornerRadius(40)
-            .padding(.horizontal)
+            .buttonStyle(GradientBackgroundStyle())
         }
     }
 }
