@@ -13,7 +13,9 @@ struct ContentView: View {
             print("Hello World!")
         } label: {
             Text("Hello World")
-                .foregroundColor(.purple)
+                .padding()
+                .background(.purple)
+                .foregroundColor(.white)
                 .font(.title)
                 .padding()
                 .border(.purple,width: 5)
