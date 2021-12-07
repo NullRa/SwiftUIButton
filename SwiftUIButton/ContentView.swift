@@ -10,9 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Button {
-            print("Hellow World!")
+            print("Hello World!")
         } label: {
-            Text("Hellow World")
+            Text("Hello World")
+                .padding()
+                .background(.purple)
+                .foregroundColor(.white)
+                .font(.title)
         }
     }
 }
