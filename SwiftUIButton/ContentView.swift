@@ -15,10 +15,14 @@ struct ContentView: View {
             Text("Hello World")
                 .padding()
                 .background(.purple)
+                .cornerRadius(40)
                 .foregroundColor(.white)
                 .font(.title)
                 .padding()
-                .border(.purple,width: 5)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke(.purple,lineWidth: 5)
+                }
         }
     }
 }
