@@ -9,26 +9,70 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Button {
-            print("Delete button tapped!")
-        } label: {
-            Image(systemName: "trash")
-                .font(.title)
-            Text("Delete")
-                .fontWeight(.semibold)
-                .font(.title)
+        VStack {
+            Button {
+                print("Share button tapped!")
+            } label: {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.title)
+                Text("Share")
+                    .fontWeight(.semibold)
+                    .font(.title)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding()
+            .background(
+                LinearGradient(
+                    gradient:
+                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+            .cornerRadius(40)
+            .padding(.horizontal)
+            
+            Button {
+                print("Edit button tapped!")
+            } label: {
+                Image(systemName: "square.and.pencil")
+                    .font(.title)
+                Text("Edit")
+                    .fontWeight(.semibold)
+                    .font(.title)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding()
+            .background(
+                LinearGradient(
+                    gradient:
+                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+            .cornerRadius(40)
+            .padding(.horizontal)
+            
+            Button {
+                print("Delete button tapped!")
+            } label: {
+                Image(systemName: "trash")
+                    .font(.title)
+                Text("Delete")
+                    .fontWeight(.semibold)
+                    .font(.title)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding()
+            .background(
+                LinearGradient(
+                    gradient:
+                        Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
+                    startPoint: .leading,
+                    endPoint: .trailing))
+            .cornerRadius(40)
+            .padding(.horizontal)
         }
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .foregroundColor(.white)
-        .padding()
-        .background(
-            LinearGradient(
-                gradient:
-                    Gradient(colors: [Color("DarkGreen"),Color("LightGreen")]),
-                startPoint: .leading,
-                endPoint: .trailing))
-        .cornerRadius(40)
-        .padding(.horizontal)
     }
 }
 
